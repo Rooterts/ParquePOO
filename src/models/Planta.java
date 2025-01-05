@@ -8,11 +8,12 @@ public class Planta extends Entidad {
     private float pesoInicial;
     private float aumentoCrecimiento;
 
-    public Planta(int posColumna, int posFila,char simbolo, float pesoExtinciøn, float pesoInicial, float aumentoCrecimiento) {
+    public Planta(int posColumna, int posFila,char simbolo, float pesoExtinciøn, float pesoInicial, float aumentoCrecimiento,int contCodigo) {
         super(posColumna, posFila, simbolo);
         this.pesoExtinciøn = pesoExtinciøn;
         this.pesoInicial = pesoInicial;
         this.aumentoCrecimiento = aumentoCrecimiento;
+        this.setCodigo("A"+String.valueOf(contCodigo));
     }
 
 
@@ -24,6 +25,6 @@ public class Planta extends Entidad {
 
     @Override
     public char simbolo() {
-        return 'P';
+        return 'A';
     }
 }

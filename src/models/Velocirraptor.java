@@ -4,16 +4,12 @@ import controller.GeneradorEntidad;
 
 import java.util.List;
 
-public class Braquiosaurio extends Animal{
+public class Velocirraptor extends Animal{
 
-    int cont=0;
-
-    public Braquiosaurio(int posColumna, int posFila, char simbolo,int contCodigo) {
+    public Velocirraptor(int posColumna, int posFila, char simbolo,int contCodigo) {
         super(posColumna, posFila, simbolo);
-
-        this.setCodigo("B"+String.valueOf(contCodigo));
-        this.cont+=1;
-        this.setEdadMaxima(12);//Establecer edad maxima para no afectar el Main
+        this.setCodigo("V"+String.valueOf(contCodigo));
+        this.setEdadMaxima(8);//Establecer edad maxima pues son los mas longevos
 
         //Inicializar el resto de atributos especificos del animal
 
@@ -25,9 +21,8 @@ public class Braquiosaurio extends Animal{
         this.edad++;
         morir();
         if(!isVivo()){
-            Cadaver cadaver = new Cadaver(this.posColumna,this.posFila,'P',generadorEntidad.contC);
+            Cadaver cadaver = new Cadaver(this.posColumna,this.posFila,'C',generadorEntidad.contC);
             generadorEntidad.contC++;
-
             entidades.add(cadaver);
         }
         else
@@ -41,21 +36,18 @@ public class Braquiosaurio extends Animal{
         return this.simbolo;
     }
 
-
-
     //Acciones del animal
-
 
     @Override
     public void comer() {
 
     }
 
-
-
     @Override
     public void morir() {
-        if(edad > edadMaxima) {setVivo(false);}
+
+        if(this.getEdad()>this.getEdadMaxima()){this.setVivo(false);}
+
     }
 
     @Override
@@ -87,4 +79,6 @@ public class Braquiosaurio extends Animal{
     public void defender() {
 
     }
+
+
 }
