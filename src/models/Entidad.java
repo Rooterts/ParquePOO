@@ -8,6 +8,9 @@ public abstract class Entidad {
     protected char simbolo;
     protected boolean vivo;
 
+    protected String codigo; //Cada entidad tendra un codigo que lo va a usar a la hora de encontrar a ese animal en una lista
+
+
     public Entidad(int posColumna, int posFila, char simbolo) {
         this.posColumna = posColumna;
         this.posFila = posFila;
@@ -43,4 +46,13 @@ public abstract class Entidad {
     public void setVivo(boolean vivo) {
         this.vivo = vivo;
     }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
 }

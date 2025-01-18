@@ -21,9 +21,8 @@ La simulación incluye ciclos en los que cada elemento del parque (plantas, dino
 
 - **Lenguaje de programación**: Java
 - **Version del OpenJDK**:openjdk-23
-- **Tecnologías**:
   - Java Swing para la interfaz gráfica.
-  - Algoritmo de ruido Perlin para la generación del terreno, utilizando el nombre del parque como semilla.
+  - [ ] Algoritmo de ruido Perlin para la generación del terreno, utilizando el nombre del parque como semilla.
 
 ## Instalación
 

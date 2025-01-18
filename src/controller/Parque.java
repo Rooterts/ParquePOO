@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Parque {
+public class Parque{
     private int filas;
     private int columnas;
     private int ciclos;
@@ -68,10 +68,10 @@ public class Parque {
         this.columnas = columnas;
         this.ciclos = ciclos;
         this.generadorEntidad = new GeneradorEntidad();
-        this.mapa = new char[filas][columnas];
+        this.mapa = new char[20][20];
         limpiarMapa();
-        this.entidades = this.generadorEntidad.generarEntidades(GeneradorEntidad.generarNumeroAleatorio(Math.min(filas,columnas),
-                filas*columnas-(filas+columnas)),filas, columnas);
+        this.entidades = this.generadorEntidad.generarEntidades(/*GeneradorEntidad.generarNumeroAleatorio(Math.min(filas,columnas),
+                filas*columnas-(filas+columnas))*/20,filas, columnas);//Puse un limite de 20 entidades solamente para probar el programa
     }
 
     private void limpiarMapa() {
